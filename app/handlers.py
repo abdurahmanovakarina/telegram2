@@ -90,11 +90,3 @@ async def horoscope_output(callback: types.CallbackQuery, state: FSMContext):
     data = await state.get_data()
     result = db.get_horoscope(data['zodiac'])
     await callback.message.edit_text(f'🪐Ваш гороскоп: {result[1 if data["period"] == "today" else 2 if data["period"] == "tomorrow" else 3 if data["period"] == "month" else 4 if data["period"] == "year" else None]}')
-
-# деплой или задеплоить(залить и запустить на сервер что-либо)
-
-
-# 300 рублей - сервер
-# 150 рублей - он дает
-# 150 рублей
-# 150 рублей
